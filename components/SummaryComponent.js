@@ -8,30 +8,18 @@ export default function SummaryComponent() {
   const [burned, setBurned] = useState(0);
   return (
     <View style={styles.container}>
-      <Text>Summary Component</Text>
+      <Text style={styles.header}>Summary</Text>
       <View style={styles.kcal}>
-        <Text>Eaten: {eaten}</Text>
-        <Button
-          title="P"
-          onPress={() => {
-            setEaten(eaten + 5);
-            setKcalLeft(kcalLeft - 5);
-          }}
-        ></Button>
-        <Text>Kcal left: {kcalLeft}</Text>
-        <Text>Burned: {burned}</Text>
-        <Button
-          title="P"
-          onPress={() => {
-            setBurned(burned + 5);
-            setKcalLeft(kcalLeft + 5);
-          }}
-        ></Button>
+        <Text style={styles.kcalSide}>Eaten: {eaten}</Text>
+        <Text style={styles.kcalHeader}>
+          Kcal left <Text style={styles.kcalCount}>{kcalLeft}</Text>
+        </Text>
+        <Text style={styles.kcalSide}>Burned: {burned}</Text>
       </View>
-      <View style={styles.value}>
-        <Text>Carbs</Text>
-        <Text>Protein</Text>
-        <Text>Fat</Text>
+      <View style={styles.nutrients}>
+        <Text style={styles.nutrientsText}>Carbs</Text>
+        <Text style={styles.nutrientsText}>Protein</Text>
+        <Text style={styles.nutrientsText}>Fat</Text>
       </View>
     </View>
   );
@@ -39,19 +27,45 @@ export default function SummaryComponent() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#f73a3a",
+    backgroundColor: "#ff5d52",
     alignItems: "center",
     borderRadius: 10,
+    padding: 10,
+  },
+  header: {
+    fontSize: 25,
+    fontWeight: "700",
+    color: "#fff",
   },
   kcal: {
-    flex: 2,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  value: {
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
+    marginVertical: 40,
+  },
+  kcalHeader: {
+    flex: 1,
+    marginHorizontal: 25,
+    textAlign: "center",
+    color: "#fff",
+    fontSize: 25,
+  },
+  kcalCount: {
+    fontWeight: "600",
+  },
+  kcalSide: {
+    color: "#fff",
+    marginHorizontal: 10,
+  },
+  nutrients: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  nutrientsText: {
+    color: "#fff",
+    marginHorizontal: 50,
+    fontSize: 15,
+    marginVertical: 15,
   },
 });
