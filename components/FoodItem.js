@@ -7,19 +7,26 @@ import {
   Button,
   Image,
 } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function FoodItem({ title, image }) {
+export default function FoodItem({ title, image, navigation }) {
   return (
-    <View style={styles.container}>
-      <View>
-        <Image source={image} style={{ width: 55, height: 55 }} />
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("Plus");
+      }}
+    >
+      <View style={styles.container}>
+        <View>
+          <Image source={image} style={{ width: 55, height: 55 }} />
+        </View>
+        <Text style={styles.text}>Add {title}</Text>
+        <Image
+          source={require("../assets/plus.png")}
+          style={{ width: 25, height: 25 }}
+        />
       </View>
-      <Text style={styles.text}>Add {title}</Text>
-      <Image
-        source={require("../assets/plus.png")}
-        style={{ width: 25, height: 25 }}
-      />
-    </View>
+    </TouchableOpacity>
   );
 }
 const styles = StyleSheet.create({

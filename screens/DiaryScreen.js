@@ -6,7 +6,7 @@ import WaterComponent from "../components/WaterComponent";
 import FoodComponent from "../components/FoodComponent";
 import SafeAreaView from "react-native-safe-area-view";
 
-export default function DiaryScreen() {
+export default function DiaryScreen(props) {
   return (
     <SafeAreaView>
       <ScrollView>
@@ -16,7 +16,7 @@ export default function DiaryScreen() {
           }}
         >
           <SummaryComponent />
-          <FoodComponent />
+          <FoodComponent navigation={props.navigation} />
           <WaterComponent />
         </View>
       </ScrollView>

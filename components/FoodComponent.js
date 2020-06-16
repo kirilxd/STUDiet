@@ -8,14 +8,19 @@ const foodData = [
   { id: 3, title: "dinner", image: require("../assets/dinner.png") },
   { id: 4, title: "snack", image: require("../assets/snack.png") },
 ];
-export default function FoodComponent() {
+export default function FoodComponent(props) {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Food</Text>
       <View>
         {foodData.map((item) => (
           <View key={item.id.toString()}>
-            <FoodItem id={item.id} title={item.title} image={item.image} />
+            <FoodItem
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              navigation={props.navigation}
+            />
           </View>
         ))}
         {/* <FlatList

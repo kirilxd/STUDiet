@@ -16,14 +16,7 @@ function Home({ navigation, firebase }) {
 
   return (
     <View style={styles.container}>
-      <Button
-        title="Signout"
-        onPress={handleSignout}
-        titleStyle={{
-          color: "#F57C00",
-        }}
-        type="clear"
-      />
+      <Button title="Signout" onPress={handleSignout} />
     </View>
   );
 }
