@@ -1,4 +1,4 @@
-# STUDiet
+# STUDiet - course project
 ## What is STUDiet?
 Studiet app is mobile application that helps people (not just students, but particularly them) to consume healthier food and spend less money on it by giving advices what and where to buy.
 ## Main functionality
