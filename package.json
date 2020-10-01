@@ -6,7 +6,10 @@
         "ios": "expo start --ios",
         "web": "expo start --web",
         "eject": "expo eject",
-        "test": "jest"
+        "test": "jest",
+        "format": "prettier --write .",
+        "check-format": "prettier --check ."
+        "linter": "eslint ."
     },
     "dependencies": {
         "axios": "^0.19.2",
