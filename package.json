@@ -39,6 +39,7 @@
         "eslint": "^7.10.0",
         "eslint-plugin-react": "^7.21.2",
         "jest-expo": "^39.0.0",
+        "prettier": "^2.1.2",
         "react-test-renderer": "^16.13.1"
     },
     "jest": {
