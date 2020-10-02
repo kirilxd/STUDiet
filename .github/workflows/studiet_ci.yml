@@ -19,8 +19,13 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: '12.x'
-            - run: npm ci
-            - run: npm run build --if-present
-            - run: npm test
-            - run: npm run format
-            - run: npm run linter
+            - name: Intall dependecies
+              run: npm ci
+            - name: Build
+              run: npm run build --if-present
+            - name: Run tests
+              run: npm test
+            - name: Fomat with prettier
+              run: npm run format
+            - name: Check with linter
+              run: npm run linter
