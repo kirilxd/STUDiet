@@ -1,9 +1,23 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import renderer, { act } from 'react-test-renderer'
 
 import App from '../App'
-
-it('renders correctly', () => {
-    const tree = renderer.create(<App />).toJSON()
-    expect(tree).toMatchSnapshot()
+import AppContainer from '../navigation'
+describe('<App />', () => {
+    it('renders correctly', () => {
+        act(() => {
+            const tree = renderer.create(<App />).toJSON()
+            expect(tree).toMatchSnapshot()
+        })
+    })
 })
+describe('<AppContainer />', () => {
+    it('renders correctly', () => {
+        act(() => {
+            const tree = renderer.create(<AppContainer />).toJSON()
+            expect(tree).toMatchSnapshot()
+        })
+    })
+})
+const tree = renderer.create(<AppContainer />).toJSON()
+console.log(tree)
