@@ -30,10 +30,9 @@ jobs:
             - name: Check with linter
               run: npm run linter
             - name: Publish to Expo
-                      uses: expo/expo-github-action@v5
-                      with:
-                        expo-version: 39.0.0
-                        expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
-                        expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
-                        - run: yarn install
-                        - run: expo publish
+            - uses: expo/expo-github-action@v5
+              with:
+                expo-version: 39.0.0
+                expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
+                expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+                - run: expo publish
