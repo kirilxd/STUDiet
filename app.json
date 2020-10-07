@@ -1,7 +1,7 @@
 {
     "expo": {
-        "name": "StuDiet",
-        "slug": "expo-firebase",
+        "name": "STUDiet",
+        "slug": "studiet",
         "privacy": "public",
         "platforms": ["ios", "android", "web"],
         "version": "1.0.0",
