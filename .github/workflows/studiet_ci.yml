@@ -3,11 +3,7 @@
 
 name: STUDiet CI/CD
 
-on:
-    push:
-        branches: [master]
-    pull_request:
-        branches: [master]
+
 
 jobs:
     build:
@@ -42,4 +38,5 @@ jobs:
             expo-version: 3.x
             expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
             expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
+        - run: npm ci
         - run: expo publish
